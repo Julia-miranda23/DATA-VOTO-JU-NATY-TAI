@@ -1,0 +1,208 @@
+:root {
+    --primary: #8a4fff;          /* Lilás vibrante */
+    --primary-hover: #7333e6;    /* Lilás escuro para efeito hover */
+    --secondary: #ff85a2;        /* Rosa suave para destaques */
+    --bg-light: #fbeeff;         /* Fundo lilás bem claro e suave */
+    --card-bg: #ffffff;          /* Fundo dos cartões em branco */
+    --text-color: #3d2c4d;       /* Texto em tom de roxo bem escuro para boa leitura */
+    --border-color: #e0c8f0;     /* Borda suave em tom de lilás pastel */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background: linear-gradient(135deg, #a269ff, #ff9ebb);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(138, 79, 255, 0.15);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    margin: 0.5rem 0 0 0;
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+main {
+    width: 100%;
+    max-width: 550px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(138, 79, 255, 0.08);
+}
+
+legend {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.2rem;
+    padding: 0 0.8rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.3rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #523b66;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    background-color: #faf5fc;
+    color: var(--text-color);
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(138, 79, 255, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 0.95rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 0.8rem;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 133, 162, 0.4);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.success {
+    background-color: #e8fadf;
+    color: #2b6d1f;
+    border: 1px solid #bceab0;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.error {
+    color: #842029;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    padding: 0.85rem;
+    border-radius: 10px;
+    margin-top: 1.2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* --- Estilos do Painel Administrativo --- */
+.login-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(138, 79, 255, 0.1);
+    max-width: 400px;
+    margin: 3rem auto;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.login-card h2 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.metrics-container {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    flex: 1;
+    min-width: 160px;
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(138, 79, 255, 0.05);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #7a638b;
+}
+
+.card p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0.5rem 0 0 0;
+}
+
+.charts-container {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 6px 18px rgba(138, 79, 255, 0.06);
+}
+
+.charts-container h2 {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-top: 0;
+    text-align: center;
+}

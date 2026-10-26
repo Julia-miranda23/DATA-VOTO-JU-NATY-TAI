@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataVotoCesf - Pesquisa Eleitoral e Socioeconômica</title>
+    <!-- Garantir o caminho correto para o CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>DataVotoCesf</h1>
+        <p>Colégio Sagrada Família • Campo Largo / PR</p>
+    </header>
+
+    <main>
+        <form id="pesquisaForm">
+            <fieldset>
+                <legend>Pesquisa Socioeconômica e Eleitoral</legend>
+
+                <div class="form-group">
+                    <label for="faixaEtaria">Faixa Etária:</label>
+                    <select id="faixaEtaria" required>
+                        <option value="">Selecione...</option>
+                        <option value="16-24">16 a 24 anos</option>
+                        <option value="25-40">25 a 40 anos</option>
+                        <option value="41-60">41 a 60 anos</option>
+                        <option value="60+">Mais de 60 anos</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="bairro">Bairro de Campo Largo:</label>
+                    <input type="text" id="bairro" required placeholder="Ex: Centro, Ferraria, Itaqui...">
+                </div>
+
+                <div class="form-group">
+                    <label for="rotina">Sua Rotina:</label>
+                    <select id="rotina" required>
+                        <option value="">Selecione...</option>
+                        <option value="Estuda">Estuda</option>
+                        <option value="Trabalha">Trabalha</option>
+                        <option value="Estuda e Trabalha">Estuda e Trabalha</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rendaFamiliar">Renda Familiar:</label>
+                    <select id="rendaFamiliar" required>
+                        <option value="">Selecione...</option>
+                        <option value="Até 2 salários">Até 2 salários mínimos</option>
+                        <option value="2 a 5 salários">De 2 a 5 salários mínimos</option>
+                        <option value="Mais de 5 salários">Mais de 5 salários mínimos</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="moradores">Nº de Moradores na Residência:</label>
+                    <input type="number" id="moradores" min="1" required placeholder="Ex: 4">
+                </div>
+
+                <div class="form-group">
+                    <label for="trabalhadores">Nº de Pessoas que Trabalham na Residência:</label>
+                    <input type="number" id="trabalhadores" min="0" required placeholder="Ex: 2">
+                </div>
+
+                <div class="form-group">
+                    <label for="certezaVoto">Certeza do Voto:</label>
+                    <select id="certezaVoto" required>
+                        <option value="">Selecione...</option>
+                        <option value="Totalmente decidido">Totalmente decidido</option>
+                        <option value="Pode mudar">Pode mudar</option>
+                        <option value="Indeciso">Indeciso</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pautaPrioritaria">Pauta Prioritária para o Município:</label>
+                    <select id="pautaPrioritaria" required>
+                        <option value="">Selecione...</option>
+                        <option value="Educacao">Educação</option>
+                        <option value="Saude">Saúde</option>
+                        <option value="Seguranca">Segurança</option>
+                        <option value="Infraestrutura">Infraestrutura e Transporte</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="btnEnviar">Enviar Resposta</button>
+            </fieldset>
+        </form>
+        
+        <div id="mensagemFeedback" class="hidden"></div>
+    </main>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
